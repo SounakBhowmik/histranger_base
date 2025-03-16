@@ -1,0 +1,127 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 13%;
+
+    --primary: 348 77% 66%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 14% 97%;
+    --secondary-foreground: 240 10% 13%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 5% 45%;
+
+    --accent: 348 77% 96%;
+    --accent-foreground: 348 77% 40%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 348 77% 66%;
+
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 240 10% 8%;
+    --foreground: 240 5% 96%;
+
+    --card: 240 10% 10%;
+    --card-foreground: 240 5% 96%;
+
+    --popover: 240 10% 8%;
+    --popover-foreground: 240 5% 96%;
+
+    --primary: 348 77% 66%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 15%;
+    --secondary-foreground: 240 5% 96%;
+
+    --muted: 240 5% 15%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 348 77% 15%;
+    --accent-foreground: 348 77% 70%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 5% 20%;
+    --input: 240 5% 20%;
+    --ring: 348 77% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .mask-gradient-b {
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  }
+
+  .mask-gradient-t {
+    mask-image: linear-gradient(to top, black 50%, transparent 100%);
+  }
+
+  .mask-gradient-r {
+    mask-image: linear-gradient(to right, black 50%, transparent 100%);
+  }
+
+  .mask-gradient-l {
+    mask-image: linear-gradient(to left, black 50%, transparent 100%);
+  }
+
+  /* Glass Morphism */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+
+  .glass-dark {
+    @apply bg-black/10 backdrop-blur-md border border-black/10 shadow-lg;
+  }
+
+  /* Animation Classes */
+  .animate-delayed-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delayed-600 {
+    animation-delay: 600ms;
+  }
+
+  .animate-delayed-900 {
+    animation-delay: 900ms;
+  }
+}
